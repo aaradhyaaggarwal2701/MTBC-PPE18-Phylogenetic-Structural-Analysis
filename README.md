@@ -86,17 +86,39 @@ Selected *M. tuberculosis* Genomes
 
 ## Genome Dataset
 
-A total of **18 *Mycobacterium tuberculosis* genome FASTA files** were collected from BV-BRC.
+Genome FASTA files were retrieved from BV-BRC and organized into
+lineage-labelled folders under `01_Genomes/`. Of the genomes retrieved, **8
+are distinct genome assemblies carrying an explicit lineage label** in
+BV-BRC's metadata:
 
-The dataset comprises:
+| Lineage   | Distinct labelled genome assemblies |
+| --------- | -----------------------------------: |
+| Lineage 1 |                                    2 |
+| Lineage 2 |                                    1 |
+| Lineage 3 |                                    1 |
+| Lineage 4 |                                    3 (incl. RW-TB008, MT-0080 as additional Lineage 4 references) |
+| **Total** |                              **8** |
 
-| Lineage   | Number of genomes |
-| --------- | ----------------: |
-| Lineage 1 |                 5 |
-| Lineage 2 |                 5 |
-| Lineage 3 |                 5 |
-| Lineage 4 |                 3 |
-| **Total** |            **18** |
+**A note on dataset composition:** the `01_Genomes/` folder contains 18
+FASTA files in total, organized into per-lineage sub-folders. However, only
+8 of these correspond to distinct genome assemblies — several sub-lineage
+file slots reference the same underlying BV-BRC assembly. This reflects a
+genuine limitation in genome availability rather than a deliberate sampling
+choice: BV-BRC's *M. tuberculosis* collection (Complete + Good quality +
+Human host filters, 624 genomes total) contains only 6 genomes with an
+explicit lineage label in their metadata at all, and this project's Lineage
+1–3 folders could not be filled to 5 genuinely independent genomes each
+using name-based lineage metadata. Reaching a true 5-genomes-per-lineage
+design would require downloading additional, unlabelled complete genomes and
+running dedicated lineage-typing software (e.g. TB-Profiler,
+fast-lineage-caller) locally — outside the scope of the current analysis.
+See `methods/01_genome_retrieval.md` for the full investigation and the
+per-genome accession table.
+
+**Downstream analyses in this repository (BLASTP, alignment, phylogeny) were
+performed on PPE18 protein sequences and their strain-level metadata, not on
+these 18 genome files directly** — see `methods/03_blastp_search.md` onward
+for exactly which sequences were used at each step.
 
 The genome files are organized according to lineage:
 
@@ -108,7 +130,8 @@ The genome files are organized according to lineage:
 └── Lineage_4/
 ```
 
-This organization preserves the lineage information associated with each genomic input.
+This organization preserves the lineage information associated with each
+genomic input, where known.
 
 ---
 
@@ -299,7 +322,7 @@ Overall, the analysed dataset showed relatively limited sequence divergence.
 
 The reconstructed PPE18 phylogenies demonstrated **very low genetic distances among the analysed sequences**.
 
-Most pairwise distances were reported as **0.00000**, with a maximum observed distance of approximately **0.00256** in the analysed dataset.
+Most pairwise distances were reported as **0.00000**. Branch lengths in the tree reach a maximum of **0.00256**; the true maximum pairwise patristic distance between the two most divergent taxa (summing both branches back to their shared ancestor) is **0.00512** — recomputed and verified directly from the Newick tree file using `scripts/phylogeny_summary.py`.
 
 The resulting phylogenetic relationships did not show a strong, clearly separated lineage-specific clustering pattern based solely on PPE18.
 
@@ -365,13 +388,14 @@ However, the observed conservation should be interpreted within the context of t
 
 The following limitations should be considered when interpreting this analysis:
 
-* The dataset contains a relatively small number of genomes compared with the global diversity of *M. tuberculosis*.
-* The number of genomes was not equal across all lineages, with three genomes sampled from Lineage 4 and five from each of Lineages 1–3.
+* **The genome dataset comprises only 8 distinct, explicitly lineage-labelled genome assemblies, not 18 independent isolates** — Lineages 1–3 are represented by 1–2 distinct genomes each rather than 5, reflecting a scarcity of lineage-labelled complete genomes in BV-BRC rather than a deliberate sampling design. See `methods/01_genome_retrieval.md` for the full investigation.
+* The dataset contains a relatively small number of distinct genomes compared with the global diversity of *M. tuberculosis*.
+* Genome sampling was highly uneven across lineages: 2 for Lineage 1, 1 for Lineage 2, 1 for Lineage 3, and 3 for Lineage 4.
 * Only four major lineages were considered.
 * The analysis focused on a single PPE gene rather than a genome-wide phylogenomic dataset.
 * High sequence conservation may reduce the phylogenetic signal available for distinguishing closely related strains.
-* The structural model is computationally predicted and does not represent an experimentally determined structure.
-* Structural quality assessment does not substitute for experimental structural validation.
+* The structural model was built on an AlphaFold DB predicted template (L7N675), not an experimentally determined structure — see `methods/06_structural_modelling.md`.
+* Structural quality assessment (MolProbity/Ramachandran) does not substitute for experimental structural validation.
 
 ---
 
@@ -397,33 +421,35 @@ The analysis could be extended through:
 MTBC-PPE18-Phylogenetic-Structural-Analysis/
 │
 ├── README.md
+├── LICENSE
+├── CITATION.cff
 │
 ├── 01_Genomes/
 │   ├── Lineage_1/
-│   │   ├── lineage 1.1.fasta
-│   │   ├── lineage 1.2.fasta
-│   │   ├── lineage 1.3.fasta
-│   │   ├── lineage 1.4.fasta
-│   │   └── lineage 1.5.fasta
+│   │   ├── lineage 1.1.fasta   (OW052570)
+│   │   ├── lineage 1.2.fasta   (OW052188)
+│   │   ├── lineage 1.3.fasta   (duplicate assembly — see methods/01_genome_retrieval.md)
+│   │   ├── lineage 1.4.fasta   (duplicate assembly)
+│   │   └── lineage 1.5.fasta   (duplicate assembly)
 │   │
 │   ├── Lineage_2/
-│   │   ├── lineage 2.1.fasta
-│   │   ├── lineage 2.2.fasta
-│   │   ├── lineage 2.3.fasta
-│   │   ├── lineage 2.4.fasta
-│   │   └── lineage 2.5.fasta
+│   │   ├── lineage 2.1.fasta   (OW052189)
+│   │   ├── lineage 2.2.fasta   (duplicate assembly)
+│   │   ├── lineage 2.3.fasta   (duplicate assembly)
+│   │   ├── lineage 2.4.fasta   (duplicate assembly)
+│   │   └── lineage 2.5.fasta   (duplicate assembly)
 │   │
 │   ├── Lineage_3/
-│   │   ├── lineage 3.1.fasta
-│   │   ├── lineage 3.2.fasta
-│   │   ├── lineage 3.3.fasta
-│   │   ├── lineage 3.4.fasta
-│   │   └── lineage 3.5.fasta
+│   │   ├── lineage 3.1.fasta   (OW052302)
+│   │   ├── lineage 3.2.fasta   (duplicate assembly)
+│   │   ├── lineage 3.3.fasta   (duplicate assembly)
+│   │   ├── lineage 3.4.fasta   (duplicate assembly)
+│   │   └── lineage 3.5.fasta   (duplicate assembly)
 │   │
 │   └── Lineage_4/
-│       ├── lineage 4.1.fasta
-│       ├── lineage 4.2.fasta
-│       └── lineage 4.3.fasta
+│       ├── lineage 4.1.fasta   (OW052571)
+│       ├── lineage 4.2.fasta   (OW052573)
+│       └── lineage 4.3.fasta   (CP041207 / MT-0080)
 │
 ├── 02_Sequences/
 │   └── PPE18_all_sequences.fasta
@@ -446,16 +472,37 @@ MTBC-PPE18-Phylogenetic-Structural-Analysis/
 ├── 06_Report/
 │   └── PPE18_Analysis_Report.pdf
 │
-└── 07_Figures/
-    ├── 01_BV-BRC.png
-    ├── 02_Mycobrowser.png
-    ├── 03_BLAST_results.png
-    ├── 04_BLAST_graphic_summary.png
-    ├── 05_Clustal_alignment.png
-    ├── 06_Phylogenetic_tree.png
-    ├── 07_Structure.png
-    └── 08_Ramachandran.png
+├── 07_Figures/
+│   ├── 01_BV-BRC.png
+│   ├── 02_Mycobrowser.png
+│   ├── 03_BLAST_results.png
+│   ├── 04_BLAST_graphic_summary.png
+│   ├── 05_Clustal_alignment.png
+│   ├── 06_Phylogenetic_tree.png
+│   ├── 07_Structure.png
+│   └── 08_Ramachandran.png
+│
+├── methods/
+│   ├── 01_genome_retrieval.md
+│   ├── 02_reference_sequence.md
+│   ├── 03_blastp_search.md
+│   ├── 04_multiple_sequence_alignment.md
+│   ├── 05_phylogenetic_reconstruction.md
+│   ├── 06_structural_modelling.md
+│   ├── 07_structural_validation.md
+│   └── dataset_metadata.csv
+│
+└── scripts/
+    ├── requirements.txt
+    ├── sequence_statistics.py
+    ├── alignment_analysis.py
+    └── phylogeny_summary.py
 ```
+
+**Note:** the "duplicate assembly" labels above are placeholders pending the
+exact per-file mapping — see `methods/01_genome_retrieval.md` for the full
+accession-to-file investigation and which specific assembly each
+placeholder file actually corresponds to.
 
 ---
 
