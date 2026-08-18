@@ -83,7 +83,7 @@ WP_009938333.1:0.00256);
 
 This confirms most of the README's genetic-distance claims directly: most
 pairwise branch lengths are **0.00000**, and the maximum single branch
-length in the tree is **0.00256**. `scripts/phylogeny_summary.py` recomputes
+length in the tree is **0.00256**. `09_Scripts/phylogeny_summary.py` recomputes
 true pairwise patristic distances from this file so the numbers in the
 README can be verified independently rather than taken on faith.
 
@@ -107,6 +107,6 @@ Genetic distances reported in the README were originally read as branch
 lengths directly off the EBI Simple Phylogeny tree diagram. As found above,
 this conflates "branch length" with "pairwise distance" for the maximum
 figure — recompute and report actual pairwise patristic distances (using
-`scripts/phylogeny_summary.py path/to/PPE18_tree.nwk`) for any future
+`09_Scripts/phylogeny_summary.py path/to/PPE18_tree.nwk`) for any future
 distance claims, rather than reading individual branch labels off the tree
 image.
