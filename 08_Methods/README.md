@@ -23,7 +23,7 @@ Most fields in these files are now filled in with confirmed data from the
 actual analysis sessions (BV-BRC, NCBI BLASTP, EBI Clustal Omega, EBI Simple
 Phylogeny, SWISS-MODEL/MolProbity). Remaining `[ ]` placeholders are minor
 (e.g. exact access dates, a couple of SWISS-MODEL similarity/coverage
-figures) — see each file for what's still open.
+figures) see each file for what's still open.
 
 **Two substantive findings surfaced while completing these docs, both now
 documented and corrected:**
