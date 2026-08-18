@@ -32,7 +32,12 @@ Sequences showing:
 
 were retained for downstream analysis.
 
-Final number of retained PPE18 sequences: **[TO VERIFY]**
+The final dataset contained 15 PPE18 protein sequences.
+
+The retained protein sequences were obtained from NCBI and are
+identified by their corresponding RefSeq protein accession numbers.
+The accession-level metadata are documented separately in the
+dataset metadata.
 
 ## 4. Multiple Sequence Alignment
 
@@ -89,6 +94,11 @@ reported above. Parameters that were not recorded in the original
 workflow are intentionally marked as not documented rather than
 being inferred or reconstructed.
 
-Accession identifiers for the individual genomes and PPE18 sequences,
-as well as the exact final sequence count, will be documented in the
-dataset metadata once verified from the original sequence files.
+The final PPE18 sequence dataset contains 15 protein sequences.
+Their individual RefSeq protein accession numbers and corresponding
+genome/lineage metadata will be documented separately in the dataset
+metadata.
+
+Ambiguous amino-acid residues present in retrieved database
+sequences were retained as originally reported and were not manually
+modified.
