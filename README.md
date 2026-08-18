@@ -153,7 +153,7 @@ The raw genomic input files are organized under:
 
 ### Figure
 
-`figures/01_BV-BRC.png`
+`07_Figures/01_BV-BRC.png`
 
 **Figure 1.** Selection and retrieval of *Mycobacterium tuberculosis* genomic sequences representing the analysed lineages from BV-BRC.
 
@@ -167,7 +167,7 @@ Mycobrowser was used to obtain the relevant gene/protein information and referen
 
 ### Figure
 
-`figures/02_Mycobrowser.png`
+`07_Figures/02_Mycobrowser.png`
 
 **Figure 2.** Mycobrowser record showing the reference PPE18 (Rv1196) gene/protein information used as the starting point for downstream sequence analysis.
 
@@ -183,11 +183,11 @@ High-similarity hits were examined using sequence identity and query coverage as
 
 ### Figures
 
-`figures/03_BLAST_results.png`
+`07_Figures/03_BLAST_results.png`
 
 **Figure 3.** NCBI BLASTP results obtained using the PPE18 reference protein sequence as the query.
 
-`figures/04_BLAST_graphic_summary.png`
+`07_Figures/04_BLAST_graphic_summary.png`
 
 **Figure 4.** BLASTP graphical summary showing the distribution and similarity of identified PPE18-related sequence hits.
 
@@ -213,7 +213,7 @@ The alignment file is stored under:
 
 ### Figure
 
-`figures/05_Clustal_alignment.png`
+`07_Figures/05_Clustal_alignment.png`
 
 **Figure 5.** Multiple sequence alignment of the analysed PPE18 protein sequences generated using Clustal Omega.
 
@@ -243,7 +243,7 @@ PPE18_tree.nwk
 
 ### Figure
 
-`figures/06_Phylogenetic_tree.png`
+`07_Figures/06_Phylogenetic_tree.png`
 
 **Figure 6.** Phylogenetic reconstruction of the analysed PPE18 sequences, illustrating the evolutionary relationships among the sampled strains.
 
@@ -263,7 +263,7 @@ The structural outputs are stored under:
 
 ### Figure
 
-`figures/07_Structure.png`
+`07_Figures/07_Structure.png`
 
 **Figure 7.** Predicted three-dimensional structure of PPE18 generated using SWISS-MODEL.
 
@@ -277,7 +277,7 @@ The Ramachandran analysis showed that the majority of residues were located with
 
 ### Figure
 
-`figures/08_Ramachandran.png`
+`07_Figures/08_Ramachandran.png`
 
 **Figure 8.** Ramachandran plot for the predicted PPE18 structural model, showing the distribution of amino acid residues across allowed and favoured conformational regions.
 
@@ -446,7 +446,7 @@ MTBC-PPE18-Phylogenetic-Structural-Analysis/
 ├── 06_Report/
 │   └── PPE18_Analysis_Report.pdf
 │
-└── figures/
+└── 07_Figures/
     ├── 01_BV-BRC.png
     ├── 02_Mycobrowser.png
     ├── 03_BLAST_results.png
@@ -475,7 +475,7 @@ MTBC-PPE18-Phylogenetic-Structural-Analysis/
 
 # Figures
 
-The `figures/` directory contains visual documentation of the major stages of the computational workflow.
+The `07_Figures/` directory contains visual documentation of the major stages of the computational workflow.
 
 | Figure       | Description                                      |
 | ------------ | ------------------------------------------------ |
