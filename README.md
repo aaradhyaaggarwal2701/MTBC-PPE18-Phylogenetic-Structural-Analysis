@@ -112,12 +112,12 @@ using name-based lineage metadata. Reaching a true 5-genomes-per-lineage
 design would require downloading additional, unlabelled complete genomes and
 running dedicated lineage-typing software (e.g. TB-Profiler,
 fast-lineage-caller) locally — outside the scope of the current analysis.
-See `methods/01_genome_retrieval.md` for the full investigation and the
+See `08_Methods/01_genome_retrieval.md` for the full investigation and the
 per-genome accession table.
 
 **Downstream analyses in this repository (BLASTP, alignment, phylogeny) were
 performed on PPE18 protein sequences and their strain-level metadata, not on
-these 18 genome files directly** — see `methods/03_blastp_search.md` onward
+these 18 genome files directly** — see `08_Methods/03_blastp_search.md` onward
 for exactly which sequences were used at each step.
 
 The genome files are organized according to lineage:
@@ -322,7 +322,7 @@ Overall, the analysed dataset showed relatively limited sequence divergence.
 
 The reconstructed PPE18 phylogenies demonstrated **very low genetic distances among the analysed sequences**.
 
-Most pairwise distances were reported as **0.00000**. Branch lengths in the tree reach a maximum of **0.00256**; the true maximum pairwise patristic distance between the two most divergent taxa (summing both branches back to their shared ancestor) is **0.00512** — recomputed and verified directly from the Newick tree file using `scripts/phylogeny_summary.py`.
+Most pairwise distances were reported as **0.00000**. Branch lengths in the tree reach a maximum of **0.00256**; the true maximum pairwise patristic distance between the two most divergent taxa (summing both branches back to their shared ancestor) is **0.00512** — recomputed and verified directly from the Newick tree file using `09_Scripts/phylogeny_summary.py`.
 
 The resulting phylogenetic relationships did not show a strong, clearly separated lineage-specific clustering pattern based solely on PPE18.
 
@@ -388,13 +388,13 @@ However, the observed conservation should be interpreted within the context of t
 
 The following limitations should be considered when interpreting this analysis:
 
-* **The genome dataset comprises only 8 distinct, explicitly lineage-labelled genome assemblies, not 18 independent isolates** — Lineages 1–3 are represented by 1–2 distinct genomes each rather than 5, reflecting a scarcity of lineage-labelled complete genomes in BV-BRC rather than a deliberate sampling design. See `methods/01_genome_retrieval.md` for the full investigation.
+* **The genome dataset comprises only 8 distinct, explicitly lineage-labelled genome assemblies, not 18 independent isolates** — Lineages 1–3 are represented by 1–2 distinct genomes each rather than 5, reflecting a scarcity of lineage-labelled complete genomes in BV-BRC rather than a deliberate sampling design. See `08_Methods/01_genome_retrieval.md` for the full investigation.
 * The dataset contains a relatively small number of distinct genomes compared with the global diversity of *M. tuberculosis*.
 * Genome sampling was highly uneven across lineages: 2 for Lineage 1, 1 for Lineage 2, 1 for Lineage 3, and 3 for Lineage 4.
 * Only four major lineages were considered.
 * The analysis focused on a single PPE gene rather than a genome-wide phylogenomic dataset.
 * High sequence conservation may reduce the phylogenetic signal available for distinguishing closely related strains.
-* The structural model was built on an AlphaFold DB predicted template (L7N675), not an experimentally determined structure — see `methods/06_structural_modelling.md`.
+* The structural model was built on an AlphaFold DB predicted template (L7N675), not an experimentally determined structure — see `08_Methods/06_structural_modelling.md`.
 * Structural quality assessment (MolProbity/Ramachandran) does not substitute for experimental structural validation.
 
 ---
@@ -428,7 +428,7 @@ MTBC-PPE18-Phylogenetic-Structural-Analysis/
 │   ├── Lineage_1/
 │   │   ├── lineage 1.1.fasta   (OW052570)
 │   │   ├── lineage 1.2.fasta   (OW052188)
-│   │   ├── lineage 1.3.fasta   (duplicate assembly — see methods/01_genome_retrieval.md)
+│   │   ├── lineage 1.3.fasta   (duplicate assembly — see 08_Methods/01_genome_retrieval.md)
 │   │   ├── lineage 1.4.fasta   (duplicate assembly)
 │   │   └── lineage 1.5.fasta   (duplicate assembly)
 │   │
@@ -482,7 +482,7 @@ MTBC-PPE18-Phylogenetic-Structural-Analysis/
 │   ├── 07_Structure.png
 │   └── 08_Ramachandran.png
 │
-├── methods/
+├── 08_Methods/
 │   ├── 01_genome_retrieval.md
 │   ├── 02_reference_sequence.md
 │   ├── 03_blastp_search.md
@@ -492,7 +492,7 @@ MTBC-PPE18-Phylogenetic-Structural-Analysis/
 │   ├── 07_structural_validation.md
 │   └── dataset_metadata.csv
 │
-└── scripts/
+└── 09_Scripts/
     ├── requirements.txt
     ├── sequence_statistics.py
     ├── alignment_analysis.py
@@ -500,7 +500,7 @@ MTBC-PPE18-Phylogenetic-Structural-Analysis/
 ```
 
 **Note:** the "duplicate assembly" labels above are placeholders pending the
-exact per-file mapping — see `methods/01_genome_retrieval.md` for the full
+exact per-file mapping — see `08_Methods/01_genome_retrieval.md` for the full
 accession-to-file investigation and which specific assembly each
 placeholder file actually corresponds to.
 
