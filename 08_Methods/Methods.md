@@ -47,7 +47,7 @@ was performed using Clustal Omega with default parameters.
 The resulting alignment was used for comparative sequence analysis
 and subsequent phylogenetic analysis.
 
-## 5. Phylogenetic Analysis
+## 5. Phylogenetic Analysis 
 
 A distance-based phylogenetic tree was constructed using the
 Simple Phylogeny tool provided by EMBL-EBI.
