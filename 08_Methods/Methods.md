@@ -6,10 +6,17 @@ Complete genomes of *Mycobacterium tuberculosis* belonging to
 Lineages 1, 2, 3, and 4 were downloaded from the Bacterial and Viral
 Bioinformatics Resource Center (BV-BRC).
 
+The selected genomes were organized according to lineage for
+downstream PPE18 sequence analysis.
+
 ## 2. PPE18 Reference Sequence
 
-The reference PPE18 protein (Rv1196; Mtb39A) sequence of
+The reference PPE18 protein (Rv1196; PPE18; Mtb39A) sequence from
 *M. tuberculosis* H37Rv was retrieved from MycoBrowser.
+
+The reference PPE18 sequence used in this analysis was 435 amino acids
+in length and served as the query sequence for downstream BLASTP
+analysis.
 
 ## 3. PPE18 Sequence Identification
 
@@ -25,20 +32,23 @@ Sequences showing:
 
 were retained for downstream analysis.
 
-Final number of retained sequences: **[TO VERIFY]**
+Final number of retained PPE18 sequences: **[TO VERIFY]**
 
 ## 4. Multiple Sequence Alignment
 
-Multiple sequence alignment was performed using Clustal Omega
-with default parameters.
+Multiple sequence alignment of the retained PPE18 protein sequences
+was performed using Clustal Omega with default parameters.
+
+The resulting alignment was used for comparative sequence analysis
+and subsequent phylogenetic analysis.
 
 ## 5. Phylogenetic Analysis
 
 A distance-based phylogenetic tree was constructed using the
-Simple Phylogeny tool from EMBL-EBI.
+Simple Phylogeny tool provided by EMBL-EBI.
 
-Most observed genetic distances were 0.00000, with a maximum
-observed distance of 0.00256.
+Most observed genetic distances were 0.00000, with a maximum observed
+distance of 0.00256.
 
 No clear lineage-specific clustering was observed.
 
@@ -50,14 +60,15 @@ were not documented in the original analysis.
 Three-dimensional structural modelling of H37Rv PPE18 was performed
 using the SWISS-MODEL homology modelling server.
 
-Model quality was assessed using:
+The resulting structural model was assessed using:
 
 - Global Model Quality Estimate (GMQE)
 - QMEAN
 - Ramachandran plot analysis
 
-Specific template information and numerical GMQE/QMEAN values:
-**[TO VERIFY]**
+Specific template information and numerical GMQE/QMEAN values were
+not documented in the original report and will be added if verified
+from the structural modelling output.
 
 ## 7. Structural Validation
 
@@ -67,5 +78,17 @@ analysis.
 The majority of residues were located within favoured regions,
 indicating acceptable overall model geometry.
 
-Numerical percentages for favoured, allowed, and disallowed regions:
-**[TO VERIFY]**
+Numerical percentages of residues in favoured, allowed, and
+disallowed regions were not documented in the original report and
+will be added if verified from the validation output.
+
+## 8. Reproducibility Notes
+
+Parameters explicitly documented in the original analysis are
+reported above. Parameters that were not recorded in the original
+workflow are intentionally marked as not documented rather than
+being inferred or reconstructed.
+
+Accession identifiers for the individual genomes and PPE18 sequences,
+as well as the exact final sequence count, will be documented in the
+dataset metadata once verified from the original sequence files.
