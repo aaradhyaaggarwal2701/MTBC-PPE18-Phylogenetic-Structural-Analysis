@@ -36,5 +36,5 @@ documented and corrected:**
 2. **Phylogenetic distance figure** (`05_phylogenetic_reconstruction.md`):
    the originally reported "max distance ≈ 0.00256" was a single branch
    length, not a true pairwise distance. The correct maximum pairwise
-   patristic distance, recomputed with `scripts/phylogeny_summary.py`, is
+   patristic distance, recomputed with `09_Scripts/phylogeny_summary.py`, is
    **0.00512**. The main README's Results section has been corrected.
