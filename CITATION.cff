@@ -1,1 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it as below."
+title: "Phylogenetic and Structural Analysis of PPE18 (Rv1196) across Mycobacterium tuberculosis Lineages"
+authors:
+  - family-names: "Aggarwal"
+    given-names: "Aaradhya"
+date-released: 2026-08-19
+url: "https://github.com/aaradhyaaggarwal2701/MTBC-PPE18-Phylogenetic-Structural-Analysis"
+repository-code: "https://github.com/aaradhyaaggarwal2701/MTBC-PPE18-Phylogenetic-Structural-Analysis"
+license: MIT
+keywords:
+  - "Mycobacterium tuberculosis"
+  - "PPE18"
+  - "Rv1196"
+  - "phylogenetics"
+  - "structural bioinformatics"
+  - "comparative genomics"
+  - "vaccine candidate"
+abstract: >
+  A computational analysis of the PPE18 (Rv1196) protein across selected
+  Mycobacterium tuberculosis lineages, integrating comparative genomics,
+  protein sequence analysis, multiple sequence alignment, phylogenetic
+  reconstruction, three-dimensional structural modelling, and structural
+  validation.
 
