@@ -30,7 +30,7 @@ documented and corrected:**
 
 1. **Genome dataset composition** (`01_genome_retrieval.md`): the 18 files
    in `01_Genomes/` correspond to only 8 distinct genome assemblies, not 18
-   independent isolates — confirmed by direct testing against BV-BRC's full
+   independent isolates confirmed by direct testing against BV-BRC's full
    624-genome *M. tuberculosis* pool. The main README's Dataset and
    Limitations sections have been updated to reflect this honestly.
 2. **Phylogenetic distance figure** (`05_phylogenetic_reconstruction.md`):
