@@ -167,4 +167,4 @@ genome list view after filtering — you can export it directly and reformat
 into the table above rather than typing each field by hand.
 
 A machine-readable copy of this table (for scripts to load) belongs at
-`methods/dataset_metadata.csv` — see that file for the CSV version.
+`08_Methods/dataset_metadata.csv` — see that file for the CSV version.
